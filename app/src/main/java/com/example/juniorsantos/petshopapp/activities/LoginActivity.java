@@ -26,7 +26,6 @@ public class LoginActivity extends AppCompatActivity {
 
     @OnClick(R.id.btCriarUsuario)
     public void abrirTela(){
-        alert("Clicou");
         Intent intent = new Intent(LoginActivity.this, CreateLogin.class);
         startActivity(intent);
     }

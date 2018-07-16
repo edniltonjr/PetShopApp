@@ -1,5 +1,6 @@
 package com.example.juniorsantos.petshopapp.activities;
 
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -56,6 +57,14 @@ public class CreateLogin extends AppCompatActivity {
         if (validaCampos()) {
             Usuario u = preencheUsuario();
             databaseReference.child(u.getStringApelido()).setValue(u);
+            alert("Usuario salvo com sucesso !\nA pagina será fechada !");
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    finish();
+                }
+            }, 1500);
         }
     }
 
