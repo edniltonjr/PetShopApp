@@ -56,10 +56,7 @@ public class CreateLogin extends AppCompatActivity {
         if (validaCampos()) {
             Usuario u = preencheUsuario();
             databaseReference.child(u.getStringApelido()).setValue(u);
-        } else {
-            alert("Revise os requisitos à criação de um usuario");
         }
-
     }
 
     private boolean validaCampos() {
@@ -83,6 +80,12 @@ public class CreateLogin extends AppCompatActivity {
                             campoAtual.setError("Insira uma senha equivalente a senha acima !");
                         }
                         break;
+
+                    case R.id.editNumeroTelefone:
+                        if(campoAtual.getText().toString().trim().length() < 15){
+                            resultado = false;
+                            campoAtual.setError("Coloque um telefone completo !");
+                        }
                 }
             }
         }
