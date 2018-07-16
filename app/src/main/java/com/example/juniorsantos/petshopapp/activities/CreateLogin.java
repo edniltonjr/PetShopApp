@@ -44,6 +44,7 @@ public class CreateLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_login);
+        //Realiza todos os find view by id, não esquecer;
         ButterKnife.bind(this);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("USUARIOS");
