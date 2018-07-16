@@ -1,7 +1,8 @@
-package com.example.juniorsantos.petshopapp;
+package com.example.juniorsantos.petshopapp.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.juniorsantos.petshopapp.R;
 
 public class MainActivity extends BasicActivity {
 

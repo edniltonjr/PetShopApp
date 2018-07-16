@@ -1,4 +1,4 @@
-package com.example.juniorsantos.petshopapp;
+package com.example.juniorsantos.petshopapp.activities;
 
 
 import android.support.annotation.NonNull;
@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
+
+import com.example.juniorsantos.petshopapp.R;
 
 public class BasicActivity extends AppCompatActivity {
 
@@ -24,7 +26,7 @@ public class BasicActivity extends AppCompatActivity {
 
     protected void setUpNavDrawer() {
         drawerLayout = null;
-        NavigationView navigationView = null;
+        NavigationView navigationView;
         ActionBar actionBar = getSupportActionBar();
 
         if (actionBar != null) {
